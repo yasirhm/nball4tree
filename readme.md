@@ -18,13 +18,13 @@ $ pip install -r requirements.txt
 
 # Experiment 1:  Training and evaluating nball embeddings
 ## Experiment 1.1: Training nball embeddings
-* [datasets for training nball embeddings](https://drive.google.com/file/d/1V2kBNgxDzFBznkd97UuwDW0OtionpP6y/view?usp=sharing)
+* [datasets for training Hindi nball embeddings](https://drive.google.com/open?id=17buZ5mqeNYswyq587LOVUEFnuDy3A2Yx)
 * download glove.6B.50d.txt from the GloVe webpage https://nlp.stanford.edu/projects/glove/ 
 * shell command for running the nball construction and training process
 ```
 % you need to create an empty file nball.txt for output
 
-$ python nball.py --train_nball /Users/<user-name>/data/glove/nball.txt --w2v /Users/<user-name>/data/glove/glove.6B.50d.txt  --ws_child /Users/<user-name>/data/glove/wordSenseChildren47634.txt  --ws_catcode /Users/<user-name>/data/glove/glove.6B.catcode.txt  --log log.txt
+$ python nball.py --train_nball /Users/<user-name>/data/glove/nball.txt --w2v /Users/<user-name>/data/cc.hi.300.vec --ws_child /Users/<user-name>/data/wordSenseChildren.txt  --ws_catcode /Users/<user-name>/data/catCodes.txt  --log log.txt
 % --train_nball: output file of nball embeddings
 % --w2v: file of pre-trained word embeddings
 % --ws_child: file of parent-children relations among word-senses
